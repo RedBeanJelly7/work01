@@ -26,9 +26,10 @@ $('.link-singly').mouseenter(function(){
     },500)
 })
 
-$('.link-singly').mouseout(function(){
-    siglyHover.reset()
-})
+// $('.link-singly').mouseout(function(){
+//     siglyHover.reset()
+// })
+
 // gsap.to('.vision-area',{
 //     scrollTrigger:{
 //         trigger:".sc-vision",
@@ -67,17 +68,17 @@ const videoAni = gsap.to(".video-bg-area",{
 
 // 첫 로딩 영역 애니메이션
 box = gsap.timeline({
-    defaults:{
+    defaults:{y:-80, stagger:0.1, duration:1,opacity:1,
     },
 }) 
 
 box
-.to('.sc-visual .group-title .main-title',{ y:-80, stagger:0.1, duration:1,opacity:1,},"0.3")
-.to('.sc-visual .order-area .link-pour',{ y:-80, stagger:0.1, duration:1,opacity:1,},"-=0.8")
-.to('.sc-visual .order-area .link-singly',{ y:-80, stagger:0.1, duration:1,opacity:1,},"-=0.8")
-.to('.sc-visual .spec-list .spec-item:nth-child(1)',{ y:-80, stagger:0.1, duration:1,opacity:1,},"-=0.6")
-.to('.sc-visual .spec-list .spec-item:nth-child(2)',{ y:-80, stagger:0.1, duration:1,opacity:1,},"-=0.8")
-.to('.sc-visual .spec-list .spec-item:nth-child(3)',{ y:-80, stagger:0.1, duration:1,opacity:1,},"-=0.8")
+.to('.sc-visual .group-title .main-title',{},"0.3")
+.to('.sc-visual .order-area .link-pour',{},"-=0.8")
+.to('.sc-visual .order-area .link-singly',{},"-=0.8")
+.to('.sc-visual .spec-list .spec-item:nth-child(1)',{},"-=0.6")
+.to('.sc-visual .spec-list .spec-item:nth-child(2)',{},"-=0.8")
+.to('.sc-visual .spec-list .spec-item:nth-child(3)',{},"-=0.8")
 
 
 
